@@ -107,25 +107,14 @@ export function PremiumGallery() {
         backgroundRepeat: 'no-repeat', */
         position: 'relative',
       }}
-    className="py-16 px-4">
+    className=" px-4">
       <div
         ref={ref}
         className="p-4 rounded-2xl max-w-4xl mx-auto text-center"
       >
         {/* Header premium con animaciones escalonadas */}
-        <div className="mb-12">
-          {/* Badge con animación */}
-          <div 
-          style={{display:'none'}}
-          className={`transition-all duration-1000 delay-0 ${
-            isVisible 
-              ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 -translate-y-12'
-          }`}>
-            <div className="inline-block text-white px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-lg" style={{ background: 'linear-gradient(to right, #e3aaaa, #d49999)' }}>
-              📸 Galería
-            </div>
-          </div>
+        <div className="mb-2">
+          
 
           {/* Título con animación */}
           <div className={`transition-all duration-1000 delay-1000 ${
@@ -147,23 +136,12 @@ export function PremiumGallery() {
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 -translate-y-12'
           }`}>
-            <p className="text-xl mb-2 text-black italic">
+            <p className="text-xl  text-black italic">
               {gallery.subtitle}
             </p>
           </div>
 
-          {/* Descripción con animación */}
-          <div 
-          style={{display:'none'}}
-          className={`transition-all duration-1000 delay-3000 ${
-            isVisible 
-              ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 -translate-y-12'
-          }`}>
-            <p className="text-black max-w-2xl mx-auto">
-              {gallery.description}
-            </p>
-          </div>
+          
         </div>
 
         {/* Divider con animación */}
@@ -172,7 +150,7 @@ export function PremiumGallery() {
             ? 'opacity-100 scale-100' 
             : 'opacity-0 scale-75'
         }`}>
-          <div className="divider flex items-center justify-center my-4">
+          <div className="divider flex items-center justify-center">
             <div className="divider-icon">
               <Camera className="w-8 h-8" style={{ color: '#e3aaaa' }} />
             </div>
