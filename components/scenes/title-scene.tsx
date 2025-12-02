@@ -165,7 +165,7 @@ export function TitleScene({ onComplete, isActive }: TitleSceneProps) {
           {showTitle && (
             <div className="animate-fade-in">
               <TypewriterText
-                text="Naiby Janeth"
+                text="Naiby Yaneth"
                 delay={150}
                 className="font-main-text text-6xl md:text-8xl lg:text-9xl text-amber-500 font-bold tracking-wide drop-shadow-2xl"
                 onComplete={() => setAllTextComplete(true)}
