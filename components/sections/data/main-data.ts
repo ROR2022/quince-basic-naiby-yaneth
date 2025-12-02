@@ -1,6 +1,6 @@
 export const quinceMainData = {
   hero: {
-    name: "Naiby Janeth",
+    name: "Naiby Yaneth",
     subtitle: "¡Mis XV años!",
     backgroundImage: "/images/quince3.jpeg",
     quote:
@@ -10,7 +10,7 @@ export const quinceMainData = {
       "/images/ny09.jpg",
       "/images/ny10.jpg",
       "/images/ny11.jpg",
-      "/images/ny12.jpg",
+      "/images/ny15.jpg",
       "/images/ny13.jpg",
     ],
   },
@@ -20,7 +20,7 @@ export const quinceMainData = {
     backgroundImage: "/images/aurora_1.jpeg",
   },
   event: {
-    celebrant: "Naiby Janeth",
+    celebrant: "Naiby Yaneth",
     //Padres María de Jesús Gutiérrez y Andres Ramírez
     parents: {
       father: "Andres Martínez",
@@ -32,6 +32,12 @@ export const quinceMainData = {
                 Hoy, yo agradezco a Dios por ellos, por su infinito amor y paciencia.`,
       backgroundImage: "/images/quinceB&B8.jpeg",
     },
+    chambelanes: [
+      "Zaid Alejandro Paredes Tun",
+      "Jarik Alejandro Tun Pech",
+      "Jeshua Jomar Ak Naal",
+      "Celso Alexander Ek Kantun"
+    ],
     //Padrino Ma. Asunción Ramirez y Juan Gutiérrez
     godparents: {
       godfather: "Juan Hernández",
@@ -217,43 +223,43 @@ export const quinceMainData = {
     images: [
       {
         id: "image1",
-        src: "/images/ny01.jpg",
-        alt: "Naiby Janeth en sus XV años",
+        src: "/images/ny04.jpg",
+        alt: "Naiby Yaneth en sus XV años",
         caption: "",
       },
       {
         id: "image2",
-        src: "/images/ny02.jpg",
+        src: "/images/ny03.jpg",
         alt: "Baile de Quinceañera",
         caption: "",
       },
       {
         id: "image3",
-        src: "/images/ny03.jpg",
+        src: "/images/ny02.jpg",
         alt: "Corte de Pastel",
         caption: "",
       },
       {
         id: "image4",
-        src: "/images/ny04.jpg",
+        src: "/images/ny01.jpg",
         alt: "Celebración con Familia y Amigos",
         caption: "",
       },
       {
         id: "image5",
-        src: "/images/ny05.jpg",
+        src: "/images/ny06.jpg",
         alt: "Detalles del Evento",
         caption: "",
       },
       {
         id: "image6",
-        src: "/images/ny06.jpg",
+        src: "/images/ny07.jpg",
         alt: "Diversión en la Pista de Baile",
         caption: "",
       },
       {
         id: "image7",
-        src: "/images/ny07.jpg",
+        src: "/images/ny05.jpg",
         alt: "Sesión de Fotos",
         caption: "",
       },
@@ -272,7 +278,7 @@ export const quinceMainData = {
   },
   qrcodeSection:{
     title: "Escanea el Código QR",
-    celebrant: "Naiby Janeth",
+    celebrant: "Naiby Yaneth",
     message: "Para acceder fácilmente a la invitación en tu dispositivo móvil.",
     mainImage: "/images/qrcode-bg.jpg",
   },
@@ -322,7 +328,7 @@ export const quinceMainData = {
   },
   customInvitations:{
     adminPassword: "admin1234",
-    invitationUrl: "https://quince-vip-Naiby Janeth.vercel.app/",
+    invitationUrl: "https://quince-vip-Naiby Yaneth.vercel.app/",
     suggested_messages: [
   "¡Querida amiga! Te invito a celebrar conmigo el día más mágico de mi vida. ¡Espero verte brillar junto a mí!",
   "¡Familia querida! Este día especial no sería lo mismo sin ustedes. ¡Los espero con mucho amor!",
