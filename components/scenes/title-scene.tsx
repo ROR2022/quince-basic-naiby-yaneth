@@ -3,6 +3,11 @@ import { Sparkles } from "@/components/sparkles";
 import { TypewriterText } from "@/components/typewriter-text";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import BackgroundCarrousel from "../sections/BackgroundCarrousel";
+import { quinceMainData } from "../sections/data/main-data";
+
+const { hero } = quinceMainData;
+const backgroundImages = hero.backgroundCarrouselImages;
 
 interface TitleSceneProps {
   onComplete: () => void;
@@ -12,7 +17,7 @@ interface TitleSceneProps {
 export function TitleScene({ onComplete, isActive }: TitleSceneProps) {
   const [showTitle, setShowTitle] = useState(false);
   const [allTextComplete, setAllTextComplete] = useState(false);
-  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(true);
   const [videoError, setVideoError] = useState(false);
   const [coronaVideoLoaded, setCoronaVideoLoaded] = useState(false);
 
@@ -50,7 +55,7 @@ export function TitleScene({ onComplete, isActive }: TitleSceneProps) {
     if (allTextComplete) {
       const timer = setTimeout(() => {
         onComplete();
-      }, 2000); // 2 seconds delay
+      }, 20000); // 2 seconds delay
 
       return () => clearTimeout(timer);
     }
@@ -59,7 +64,7 @@ export function TitleScene({ onComplete, isActive }: TitleSceneProps) {
   return (
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
-      <video
+      {/* <video
         autoPlay
         muted
         loop
@@ -74,7 +79,7 @@ export function TitleScene({ onComplete, isActive }: TitleSceneProps) {
         }}
       >
         <source src="/video/kendra2.mp4" type="video/mp4" />
-        {/* Fallback to image if video fails to load */}
+        
         <div 
           className="absolute inset-0 w-full h-full"
           style={{
@@ -86,7 +91,7 @@ export function TitleScene({ onComplete, isActive }: TitleSceneProps) {
             transition: 'opacity 0.5s ease-in-out'
           }}
         />
-      </video>
+      </video> */}
 
       {/* Minimal overlay only if needed for text readability */}
       {/* <div className="absolute inset-0 bg-black/15 z-10" /> */}
@@ -100,12 +105,14 @@ export function TitleScene({ onComplete, isActive }: TitleSceneProps) {
           </div>
         </div>
       )}
+
+      <BackgroundCarrousel images={backgroundImages} />
       
       <Sparkles count={25} />
 
       {/* Corona Video - Animated and Natural Looking */}
       {videoLoaded && (
-        <div className="absolute top-6 left-1/2 z-30" style={{ transform: 'translateX(-50%)' }}>
+        <div className="absolute top-6 left-1/2 z-30" style={{ transform: 'translateX(-50%)', display:'none' }}>
           <video
             autoPlay
             muted

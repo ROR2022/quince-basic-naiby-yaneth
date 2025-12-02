@@ -15,7 +15,7 @@ interface SplashSceneProps {
 }
 
 function SplashSceneContent({ onStart }: SplashSceneProps) {
-  const [videoLoaded, setVideoLoaded] = useState(true)
+  const [videoLoaded, setVideoLoaded] = useState(false)
   const [videoError, setVideoError] = useState(false)
   const [dataInvitation, setDataInvitation] = useState<any>(null)
   const searchParams = useSearchParams()
@@ -87,7 +87,7 @@ function SplashSceneContent({ onStart }: SplashSceneProps) {
       className="relative w-full h-screen flex items-center justify-center cursor-pointer overflow-hidden"
     >
       {/* Video Background */}
-      {/* <video
+      <video
         autoPlay
         muted
         loop
@@ -110,19 +110,19 @@ function SplashSceneContent({ onStart }: SplashSceneProps) {
             transition: 'opacity 0.5s ease-in-out'
           }}
         />
-      </video> */}
+      </video> 
 
-      <BackgroundCarrousel images={backgroundImages} />
+      
 
       {/* Loading Indicator */}
-      {/*!videoLoaded && (
+      {!videoLoaded && (
         <div className="absolute inset-0 z-40 flex items-center justify-center bg-black/30">
           <div className="text-center space-y-4">
             <div className="animate-spin rounded-full h-16 w-16 border-4 border-pink-500 border-t-transparent mx-auto"></div>
             <p className="text-white text-lg font-semibold">Cargando experiencia...</p>
           </div>
         </div>
-      )*/}
+      )}
 
       <Sparkles count={30} />
 

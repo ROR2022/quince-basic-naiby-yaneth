@@ -18,6 +18,7 @@ export function AudioPlayer({ src, autoPlay = false, onPlay }: AudioPlayerProps)
 
   useEffect(() => {
     if (autoPlay && audioRef.current && src && !hasError) {
+      audioRef.current.currentTime = 6;
       audioRef.current
         .play()
         .then(() => {
